@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "start": " nodemon Backend/index.js",
+  "scripts": { 
     "dev": " nodemon  Backend/index.js",
-    "build": "npm install && npm install  --prefix Frontend && npm run build --prefix Frontend"
+    "build": "npm install && npm install  --prefix Frontend && npm run build --prefix Frontend",
+    "start": " nodemon Backend/index.js"
   },
   "author": "",
   "license": "ISC",
