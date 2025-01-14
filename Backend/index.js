@@ -4,7 +4,7 @@ const express = require("express");
 const dbConnect = require("./dbConnect/DbConnect");
 
 const OrderRouter = require("./Routers/OrderRouter");
-const userRouter = require("./Routers/userRouter");
+const userRouter = require("./Routers/UserRouter");
 const Cors = require("cors");
 const bodyParser = require("body-parser");
 
