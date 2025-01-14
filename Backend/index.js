@@ -1,4 +1,4 @@
-const path =require("path")
+const   path =require("path")
 require("dotenv").config();
 const express = require("express");
 const dbConnect = require("./dbConnect/DbConnect");
@@ -18,8 +18,8 @@ server.use("/order", OrderRouter);
 server.use("/signin", userRouter);
 
 server.use(express.static(path.join(_dirname, "/Frontend/dist")));
-server.get("*", (req, res) => {
-  res.sendFile(path.resolve(_dirname, "Frontend", "dist", "index.js"));
+server.get("*", (_, res) => {
+  res.sendFile(path.resolve(_dirname, "Frontend", "dist", "index.html"));
 });
 
 dbConnect()
