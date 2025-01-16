@@ -9,6 +9,8 @@ const Cors = require("cors");
 const bodyParser = require("body-parser");
 
 const server = express();
+const PORT= process.env.PORT_KEY ||8080;
+
 const _dirname = path.resolve();
 
 server.use(express.json());
@@ -24,8 +26,8 @@ server.get("*", (_, res) => {
 
 dbConnect()
   .then(() => {
-    server.listen(8000, () => {
-      console.log("server is listening on port 8000");
+    server.listen(PORT, () => {
+      console.log(`server is listening on port ${PORT}`);
     });
   })
   .catch((err) => {
